@@ -1,0 +1,21 @@
+<!doctype html>
+<title>Archival Disk Usage</title>
+<h3>Disk usage for archival volume</h3>
+<table>
+	<tr>
+		<th>Vol Name</th>
+		<th>Total GB</th>
+		<th>Used GB</th>
+		<th>Free GB</th>
+		<th>Used %</th>
+	</tr>
+	{% for mount in mounts %}
+	<tr>
+		<td>{{ mount.name }}</td>
+		<td>{{ mount.total }}</td>
+		<td>{{ mount.used }}</td>
+		<td>{{ mount.free }}</td>
+		<td>{{ mount.percent }}</td>
+	</tr>
+	{% endfor %}
+</table>
